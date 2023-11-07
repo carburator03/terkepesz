@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Térképész</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <img src="./bg.png" alt="" id="bg-img" draggable="false">
+
+        <div id="content">
+            <p id="title">Burgonya térkép</p>
+            <div id="flex-container">
+                <div id="map"></div>
+                <div id="right-wrapper">
+                    <div id="seasons">
+                        <div id="spring">
+                            <p>Tavasz</p>
+                            <p id="spring-point">0 pont</p>
+                        </div>
+                        <div id="summer">
+                            <p>Nyár</p>
+                            <p id="summer-point">0 pont</p>
+                        </div>
+                        <div id="fall">
+                            <p>Ősz</p>
+                            <p id="fall-point">0 pont</p>
+                        </div>
+                        <div id="winter">
+                            <p>Tél</p>
+                            <p id="winter-point">0 pont</p>
+                        </div>
+                    </div>
+                    <p id="current-season">Jelenlegi évszak: <span></span></p>
+                    <hr class="separator">
+                    <div id="missions-container"></div>
+                    <hr class="separator">
+                    <p id="season-info">Évszakból hátralévő idő: <b id="remaining-time">0</b>/7</p>
+                    <p>Következő elem:</p>
+                    <div id="next-element-container">
+                        <div id="show-element">
+                            <p id="time"><b id="time-number"></b>&#128338;</p>
+                            <div id="element-matrix-table">
+                            </div>
+                        </div>
+                        <div>
+                            <button id="rotate">Forgatás</button> <br>
+                            <button id="mirror">Tükrözés</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

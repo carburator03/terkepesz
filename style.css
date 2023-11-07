@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Mono:wght@200;400;600;700&display=swap');
+
+:root {
+  --textColor: #3d2001;
+  --fieldColor: #efe2b3;
+  --spring: #69be6c;
+  --summer: #e0ca5c;
+  --fall: #eabd94;
+  --winter: #59d2ec;
+  --springBorder: #225a24;
+  --summerBorder: #806e15;
+  --fallBorder: #885c33;
+  --winterBorder: #1a6e81;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier Prime', monospace;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+#main {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+}
+
+#bg-img {
+  pointer-events: none;
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0.4;
+  z-index: -999;
+}
+
+#content {
+  margin: 40px;
+}
+
+#title {
+  color: var(--textColor);
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+#flex-container {
+  margin: 3vh auto 0;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#map {
+  background-color: white;
+  border: 10px solid white;
+  border-radius: 10px;
+  display: table;
+  height: fit-content;
+}
+
+.table-cell {
+  display: table-cell;
+  height: 60px;
+  width: 60px;
+  border: 2px solid white;
+  background-image: url(./assets/tiles/base_tile.png);
+  background-size: contain;
+}
+
+#right-wrapper {
+  width: 55%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#seasons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#seasons div {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+#seasons div:nth-child(1) {
+  background-color: var(--spring);
+  border: 3px solid var(--springBorder);
+}
+
+#seasons div:nth-child(2) {
+  background-color: var(--summer);
+  border: 3px solid var(--summerBorder);
+}
+
+#seasons div:nth-child(3) {
+  background-color: var(--fall);
+  border: 3px solid var(--fallBorder);
+}
+
+#seasons div:nth-child(4) {
+  background-color: var(--winter);
+  border: 3px solid var(--winterBorder);
+}
+
+.season-active {
+  font-weight: bold;
+  border: 5px solid var(--textColor) !important;
+}
+
+#current-season {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 50px 0 0 0;
+}
+
+#current-season span {
+  font-weight: bolder;
+}
+
+.separator {
+  border: 1px solid var(--textColor);
+  width: 100%;
+}
+
+#missions-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-flow: row wrap;
+}
+
+.active-mission img {
+  border-radius: 30px;
+}
+
+.active-mission span {
+  font-weight: bold;
+}
+
+.spring {
+  border: 5px solid var(--spring);
+}
+
+.summer {
+  border: 5px solid var(--summer);
+}
+
+.fall {
+  border: 5px solid var(--fall);
+}
+
+.winter {
+  border: 5px solid var(--winter);
+}
+
+.mission-img {
+  height: 150px;
+}
+
+#season-info {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#next-element-container {
+  margin-top: 50px;
+  width: fit-content;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+
+#next-element-container button {
+  margin: 30px;
+}
+
+#show-element {
+  height: 240px;
+  width: 240px;
+  background-color: white;
+  border-radius: 10px;
+  border: 3px solid var(--textColor);
+}
+
+#element-matrix-table {
+  display: table;
+  margin: 5px auto 0;
+}
+
+.element-matrix-cell {
+  display: table-cell;
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  background-size: contain;
+  border: 2px solid white;
+  background-color: var(--fieldColor);
+}
+
+#time {
+  margin: 5px 20px 0 0;
+  text-align: end;
+  font-size: 1.2rem;
+}
+
+.wrong-border {
+  border: 2px solid red;
+  border-radius: 10px;
+}
