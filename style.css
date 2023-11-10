@@ -19,6 +19,8 @@ body {
   padding: 0;
   font-family: 'Courier Prime', monospace;
   font-family: 'Noto Sans Mono', monospace;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 #main {
@@ -26,15 +28,19 @@ body {
   display: inline-block;
   overflow: hidden;
   width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 #bg-img {
   pointer-events: none;
   position: absolute;
+  z-index: -999;
+  top: 0;
+  left: 0;
   min-height: 100%;
   min-width: 100%;
-  opacity: 0.4;
-  z-index: -999;
+  filter: blur(10px);
 }
 
 #content {
@@ -69,8 +75,9 @@ body {
   height: 60px;
   width: 60px;
   border: 2px solid white;
-  background-image: url(./assets/tiles/base_tile.png);
-  background-size: contain;
+  background-image: url('./assets/tiles/base_tile.svg');
+  background-size: cover;
+  border-radius: 10px;
 }
 
 #right-wrapper {
@@ -159,7 +166,7 @@ body {
 }
 
 .fall {
-  border: 5px solid var(--fall);
+  border: 5px solid var(--fallBorder);
 }
 
 .winter {
@@ -167,7 +174,22 @@ body {
 }
 
 .mission-img {
-  height: 150px;
+  height: 160px;
+}
+
+#missions-container div {
+  position: relative;
+}
+
+#missions-container p {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 15px;
+  display: block;
+  right: 30px;
+  color: white;
 }
 
 #season-info {
@@ -176,7 +198,6 @@ body {
 }
 
 #next-element-container {
-  margin-top: 50px;
   width: fit-content;
   align-self: center;
   display: flex;
@@ -216,7 +237,62 @@ body {
   font-size: 1.2rem;
 }
 
-.wrong-border {
-  border: 2px solid red;
+.wrong-move {
+  background-color: #f7473e !important;
+}
+
+#the-end {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#full-point {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  display: none;
+}
+
+#rotate,
+#mirror,
+#end-button {
+  background-color: #ffffff;
   border-radius: 10px;
+  border: 3px solid #3d2001;
+  display: inline-block;
+  cursor: pointer;
+  color: #3d2001;
+  font-size: 1.1rem;
+  padding: 10px 24px;
+  text-decoration: none;
+  font-family: 'Noto Sans Mono', monospace;
+  transition: all 0.4s;
+}
+
+#rotate:hover,
+#mirror:hover,
+#end-button:hover {
+  background-color: var(--fieldColor);
+}
+
+#rotate:active,
+#mirror:active,
+#end-button:active {
+  position: relative;
+  top: 2px;
+}
+
+#endgame-div {
+  display: none;
+  margin: 20px auto 0;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--fieldColor);
+  color: var(--textColor);
+  border-radius: 10px;
+  border: 5px solid var(--textColor);
+}
+
+#endgame-div p {
+  margin: 0;
 }

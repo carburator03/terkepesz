@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Térképész</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -40,7 +41,11 @@
                     <div id="missions-container"></div>
                     <hr class="separator">
                     <p id="season-info">Évszakból hátralévő idő: <b id="remaining-time">0</b>/7</p>
-                    <p>Következő elem:</p>
+                    <p id="item-to-place">Lehelyezendő elem: </p>
+                    <div id="endgame-div">
+                        <p><span id="the-end">JÁTÉK VÉGE!</span></p>
+                        <p id="full-point">Összpontszám: </p>
+                    </div>
                     <div id="next-element-container">
                         <div id="show-element">
                             <p id="time"><b id="time-number"></b>&#128338;</p>
@@ -50,6 +55,9 @@
                         <div>
                             <button id="rotate">Forgatás</button> <br>
                             <button id="mirror">Tükrözés</button>
+                        </div>
+                        <div>
+                            <button id="end-button">Játék vége</button>
                         </div>
                     </div>
                 </div>
