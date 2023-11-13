@@ -568,7 +568,7 @@ function gazdag_varos_mission() {
       fields = [];
       if (!fields.includes(game[0][i + 1]) && game[0][i + 1] !== 'base')
         fields.push(game[0][i + 1]);
-      if (!fields.includes(game[0][i - 1]) && game[0][i - j] !== 'base')
+      if (!fields.includes(game[0][i - 1]) && game[0][i - 1] !== 'base')
         fields.push(game[0][i - 1]);
       if (!fields.includes(game[1][i]) && game[1][i] !== 'base') fields.push(game[1][i]);
       if (fields.length >= 3) missionPoints[index] += 3;
@@ -724,7 +724,6 @@ function wrongMove(draw) {
     let eX = e[0];
     let eY = e[1];
     let el = document.getElementById(eX + '-' + eY);
-    console.log('wrongmove');
     el.classList.add('wrong-move');
     setTimeout(() => el.classList.remove('wrong-move'), 300);
   });
